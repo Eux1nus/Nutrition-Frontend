@@ -1,0 +1,146 @@
+.registration-form {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../../../assets/images/registration-background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+
+  .registration-form-container {
+    width: 959px;
+    // height: 926px;
+    padding: 48px 0 32px 64px;
+    margin: 96px 0 58px 87px;
+    border: 0px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    .header {
+      margin: 0 0 32px 0;
+      font-style: normal;
+      font-size: 40px;
+      line-height: 48px;
+      color: #4f4f4f;
+      font-family: "SFProDisplay";
+      & > h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 100%;
+      }
+    }
+    & > h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 100%;
+      margin-bottom: 32px;
+    }
+    .registration-container {
+      width: 663px;
+      margin: 0px 0 56px 0px;
+      color: #4f4f4f;
+      font-family: "SFProDisplay";
+      .labelInputForm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        &:nth-child(0) {
+          margin-top: 56px;
+        }
+      }
+      .textInput {
+        width: 470px;
+        background: #ffffff;
+        border-radius: 10px;
+        border-style: none;
+        font-family: "SFProDisplay";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 100%;
+        padding: 19px 0px 19px 31px;
+        text-align: left;
+        outline: none;
+      }
+    }
+    .agreement-container {
+      font-size: 18px;
+      line-height: 120%;
+      width: 714px;
+      height: 35px;
+      color: #4f4f4f;
+      font-family: "SFProDisplay";
+      align-items: center;
+      display: flex;
+      margin: 0px 0 56px 0px;
+      .chkbox {
+        width: 24px;
+        height: 24px;
+        border: 1px solid #b6b6b6;
+      }
+      .agreement-label {
+        margin-left: 17px;
+      }
+    }
+    .control-container {
+      color: #4f4f4f;
+      font-family: "SFProDisplay";
+      display: flex;
+      align-items: center;
+      margin: 56px 72px 0 502px;
+      .forward-btn {
+        border-radius: 10px;
+        width: 150px;
+        height: 48px;
+        margin-right: 20px;
+        border-style: none;
+        color: white;
+        background: #56bf9c;
+        font-family: "SFProDisplay";
+        font-size: 20px;
+        line-height: 24px;
+        cursor: pointer;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+      .forward-btn:hover {
+        -moz-box-shadow: 0 0 10px #56bf9c;
+        -webkit-box-shadow: 0 0 10px #56bf9c;
+        box-shadow: 0 0 10px #56bf9c;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+      .create-acc-btn {
+        border-radius: 10px;
+        width: 215px;
+        height: 48px;
+        border-style: none;
+        color: white;
+        background: #56bf9c;
+        font-family: "SFProDisplay";
+        font-size: 20px;
+        line-height: 24px;
+        cursor: pointer;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+      .create-acc-btn:hover {
+        -moz-box-shadow: 0 0 10px #56bf9c;
+        -webkit-box-shadow: 0 0 10px #56bf9c;
+        box-shadow: 0 0 10px #56bf9c;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+      .create-acc-btn:disabled {
+        background: #767e7b;
+      }
+    }
+  }
+}

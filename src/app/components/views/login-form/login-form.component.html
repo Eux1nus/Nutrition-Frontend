@@ -1,0 +1,49 @@
+<section class="login-form">
+  <div class="auth-form-container">
+    <div class="header">
+      <img class="flower-icon" src="/assets/icons/flower-icon.png" />
+      <h1>
+        Нутрициолог <br />
+        Ольга Угрюмова
+      </h1>
+    </div>
+    <div class="login-container">
+      <h2>Личный кабинет</h2>
+      <input
+        #loginInput
+        class="login"
+        type="text"
+        (click)="OnInputClick(0)"
+        placeholder="Логин"
+      />
+      <div class="pass-container">
+        <input
+          #passwordInput
+          class="password"
+          [type]="passwordVision ? 'text' : 'password'"
+          (click)="OnInputClick(1)"
+          placeholder="Пароль"
+        />
+        <img
+          class="hide-pass"
+          [src]="
+            passwordVision
+              ? '/assets/icons/hide-pass.png'
+              : '/assets/icons/show-pass.png'
+          "
+          (click)="passwordVision = !passwordVision"
+        />
+      </div>
+    </div>
+    <div class="controls">
+      <button class="login-btn" (click)="auth()">Войти</button>
+      <a class="get-acc" href="">Создать аккаунт</a>
+    </div>
+    <div>
+      <label for="label-text" class="label">{{ textValue }}</label>
+    </div>
+    <div class="forgot-pass">
+      <a href="">Забыли пароль?</a>
+    </div>
+  </div>
+</section>

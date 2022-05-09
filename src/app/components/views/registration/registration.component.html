@@ -1,0 +1,120 @@
+<section class="registration-form">
+  <div class="registration-form-container">
+    <div class="header">
+      <h1>Регистрация</h1>
+    </div>
+    <form class="registration-container" #regForm>
+      <h2>Личные данные</h2>
+      <label class="labelInputForm" for=""
+        >Фамилия, Имя,<br />
+        Отчество
+        <input
+          type="text"
+          #nameInput
+          class="textInput"
+          name="fio"
+          [(ngModel)]="userName"
+          placeholder="Введите ФИО"
+          required
+        />
+      </label>
+      <label class="labelInputForm" for=""
+        >E-mail
+        <input
+          type="text"
+          name="email"
+          #emailInput
+          class="textInput"
+          [(ngModel)]="email"
+          placeholder="Введите e-mail"
+          required
+        />
+      </label>
+      <label class="labelInputForm" for=""
+        >Телефон
+        <input
+          type="tel"
+          name="tel"
+          #phoneInput
+          class="textInput"
+          [(ngModel)]="phone"
+          placeholder="Введите телефон"
+          required
+        />
+      </label>
+      <label class="labelInputForm" for=""
+        >Дата рождения
+        <input
+          type="date"
+          name="birth"
+          #dateInput
+          class="textInput"
+          [(ngModel)]="date"
+          placeholder="date"
+          required
+        />
+      </label>
+      <h2>Пароль</h2>
+      <label class="labelInputForm" for=""
+        >Пароль
+        <input
+          type="text"
+          name="pass"
+          #passwordInput
+          class="textInput"
+          [(ngModel)]="password"
+          placeholder="Введите пароль"
+          required
+        />
+      </label>
+      <label class="labelInputForm" for=""
+        >Подтверждение пароля
+        <input
+          type="text"
+          name="confirm-pass"
+          #confirmpasswordInput
+          class="textInput"
+          [(ngModel)]="confirmPassword"
+          placeholder="Повторите пароль"
+          required
+        />
+      </label>
+    </form>
+    <div class="agreement-container">
+      <div #agreementIsChecked class="agreemont-box">
+        <input
+          type="checkbox"
+          #checkbox
+          name="agree"
+          class="chkbox"
+          [(ngModel)]="agreement"
+        />
+      </div>
+      <div class="agreement-label">
+        Я ознакомлен(а) с <a href="">Пользовательским соглашением</a> и
+        <a href="">Политикой конфиденциальности</a> и согласен(а) с условиями
+        пользования сервисом
+      </div>
+    </div>
+    <div class="control-container">
+      <button class="forward-btn" (click)="forward()">Назад</button>
+      <button
+        type="submit"
+        class="create-acc-btn"
+        [disabled]="
+          !userName.length ||
+          !email.length ||
+          !phone.length ||
+          !date.length ||
+          !password.length ||
+          !confirmPassword.length ||
+          !agreement || regForm.invalid
+        "
+        (click)="createAccaunt()"
+        #submit
+      >
+        Создать аккаунт
+      </button>
+    </div>
+  </div>
+</section>
