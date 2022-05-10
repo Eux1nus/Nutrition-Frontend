@@ -35,8 +35,6 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private accountService: AccountServiceService) {}
 
-  public forward() {}
-
   public createAccaunt() {
     console.log(this.userName);
 
