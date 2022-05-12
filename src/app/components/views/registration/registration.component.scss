@@ -7,19 +7,19 @@
   background-size: cover;
   display: flex;
   flex-direction: row;
-  
+  justify-content: center;
 
   .registration-form-container {
     width: 959px;
-    // height: 926px;
+    height: 940px;
     padding: 48px 0 32px 64px;
-    margin: 90px 0 58px 700px;
+    margin: 90px 700px 58px 700px;
     border: 0px solid rgb(255, 255, 255);
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.76);
+    background: rgba(255, 255, 255, 0.60);
 
     .header {
-      margin: 0 0 32px 100px;
+      margin: 0 0 50px 5px;
       font-style: normal;
       font-size: 40px;
       line-height: 48px;
@@ -41,7 +41,7 @@
     }
     .registration-container {
       width: 663px;
-      margin: 0px 0 56px 100px;
+      margin: 0px 0px 56px 50px;
       color: #4f4f4f;
       font-family: "SFProDisplay";
       .labelInputForm {
@@ -67,6 +67,10 @@
         padding: 19px 0px 19px 31px;
         text-align: left;
         outline: none;
+      }
+      .textInput[type="date"]{
+
+
       }
     }
     .agreement-container {
@@ -129,10 +133,8 @@
         font-size: 20px;
         line-height: 24px;
         cursor: pointer;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        transition: all 0.5s ease;
       }
+      
       .create-acc-btn:hover {
         -moz-box-shadow: 0 0 10px #56bf9c;
         -webkit-box-shadow: 0 0 10px #56bf9c;
@@ -141,8 +143,12 @@
         -moz-transition: all 0.5s ease;
         transition: all 0.5s ease;
       }
+
       .create-acc-btn:disabled {
         background: #767e7b;
+        -moz-box-shadow: 0 0 0;
+        -webkit-box-shadow: 0 0 0;
+        box-shadow: 0 0 0;
       }
     }
   }
