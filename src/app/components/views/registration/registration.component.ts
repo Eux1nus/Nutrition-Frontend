@@ -1,5 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { AccountServiceService } from '../../../common/services/account-service.service';
+import { RegistrationSuccsessComponent } from './registration-succsess/registration-succsess/registration-succsess.component';
 
 @Component({
   selector: 'app-registration',
@@ -33,21 +35,21 @@ export class RegistrationComponent implements OnInit {
   @ViewChild('agreementIsChecked')
   agreementIsChecked!: ElementRef;
 
-  constructor(private accountService: AccountServiceService) {}
+  constructor(private router: Router, private accountService: AccountServiceService) {}
 
   public createAccaunt() {
     console.log(this.userName);
 
     let phoneResult = this.isValidPhone(this.phone);
     let emailResult = this.isValidEmail(this.email);
-    let passwordResult = this.isValidPassword(this.password);
+    // let passwordResult = this.isValidPassword(this.password);
 
     if (phoneResult == false) {
       console.log('Вы ввели недопустимый формат телефона.');
     } else if (emailResult == false) {
       console.log('Вы ввели недопустимый формат E-mail.');
-    } else if (passwordResult == false) {
-      console.log('Вы ввели недопустимый формат пароля.');
+    // } else if (passwordResult == false) {
+    //   console.log('Вы ввели недопустимый формат пароля.');
     }
 
     if (
@@ -82,11 +84,11 @@ export class RegistrationComponent implements OnInit {
     return emailRegex.test(checkStr);
   }
 
-  public isValidPassword(checkStr: string): boolean {
-    let passwordRegex: any =
-      /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-    return passwordRegex.test(checkStr);
-  }
+  // public isValidPassword(checkStr: string): boolean {
+  //   let passwordRegex: any =
+  //     /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+  //   return passwordRegex.test(checkStr);
+  // }
 
   ngOnInit(): void {}
 }

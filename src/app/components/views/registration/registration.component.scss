@@ -68,10 +68,13 @@
         text-align: left;
         outline: none;
       }
-      .textInput[type="date"]{
-
-
+      .textInput:focus-within{
+        box-shadow: inset 0 0.1px 0.1px #56bf9c, 0 0.1px 8px #56bf9c,
+        0 0.1px 0.1px #56bf9c;
       }
+      // .textInput[type="date"]{
+
+      // }
     }
     .agreement-container {
       font-size: 18px;

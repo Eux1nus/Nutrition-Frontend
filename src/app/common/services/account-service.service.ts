@@ -30,17 +30,17 @@ export class AccountServiceService extends BaseHttpService {
 
   public createAccount(
     password: string,
-    name: string,
-    dateofbirth: string,
     email: string,
+    dateofbirth: string,
+    name: string,
     phone: string,
     agreementIsChecked: boolean
   ) {
     let createAccDto = {
       Password: password,
-      Name: name,
-      DateOfBirth: dateofbirth,
       Email: email,
+      DateOfBirth: dateofbirth,
+      Name: name,
       Phone: phone,
       AgreementIsChecked: agreementIsChecked,
     };

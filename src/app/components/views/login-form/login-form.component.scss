@@ -71,8 +71,8 @@
         outline: none;
       }
       .login:focus-within {
-        box-shadow: inset 0 1.5px 1.5px #56bf9c, 0 1.5px 8px #56bf9c,
-          0 1.5px 1.5px #56bf9c;
+        box-shadow: inset 0 0.1px 0.1px #56bf9c, 0 0.1px 8px #56bf9c,
+        0 0.1px 0.1px #56bf9c;
       }
       .pass-container {
         display: flex;
@@ -100,8 +100,8 @@
           outline: none;
         }
         .password:focus-within {
-          box-shadow: inset 0 1.5px 1.5px #56bf9c, 0 1.5px 8px #56bf9c,
-            0 1.5px 1.5px #56bf9c;
+          box-shadow: inset 0 0.1px 0.1px #56bf9c, 0 0.1px 8px #56bf9c,
+          0 0.1px 0.1px #56bf9c;
         }
         .hide-pass {
           position: absolute;
